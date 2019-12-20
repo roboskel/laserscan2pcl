@@ -4,9 +4,9 @@ project(laserscan_stacker)
 add_compile_options(-std=c++11)
 
 find_package(catkin REQUIRED COMPONENTS
-  pointcloud_msgs
   message_filters
   laser_geometry
+  roboskel_msgs
   sensor_msgs
   std_msgs
   pcl_ros
