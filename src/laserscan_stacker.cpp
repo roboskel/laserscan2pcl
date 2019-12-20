@@ -116,8 +116,8 @@ void scanCallback (const sensor_msgs::LaserScan::ConstPtr scan_in){
         laserscans.header.frame_id = scan_in->header.frame_id;
         laserscans.scans.push_back(*scan_in);
         if (laserscans.scans.size() == size){
-            laserscans.scans.erase(laserscans.scans.begin(), laserscans.scans.begin() + overlap);
             pub.publish(laserscans);
+            laserscans.scans.erase(laserscans.scans.begin(), laserscans.scans.begin() + overlap);
         }
     }
 }
