@@ -22,7 +22,7 @@
   <buildtool_depend>catkin</buildtool_depend>
 
   <depend>message_filterslaser_geometry</depend>
-  <depend>pointcloud_msgs</depend>
+  <depend>roboskel_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>std_msgs</depend>
   <depend>roscpp</depend>
