@@ -5,3 +5,4 @@ size: 60
 factor: 0.025 #z distance (meters) between two consecutive laser scans
 # overlap: 35
 overlap: 1
+use_a_laserscan_vector_instead: false 
