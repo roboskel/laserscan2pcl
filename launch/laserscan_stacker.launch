@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <launch>
+    <arg name="input_topic" default="/scan_filtered" />
+
     <node pkg="laserscan_stacker" type="laserscan_stacker" respawn="false" name="laserscan_stacker" output="screen">
         <rosparam file="$(find laserscan_stacker)/config/laserscan_stacker.yaml" command="load" />
+        <rosparam param="input_topic" subst_value="True">$(arg input_topic)</rosparam>
     </node>
 
     <node pkg="laser_filters" type="scan_to_scan_filter_chain" respawn="false" name="laserscan_filter" output="screen">
